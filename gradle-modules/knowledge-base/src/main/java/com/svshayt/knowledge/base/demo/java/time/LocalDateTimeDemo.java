@@ -1,7 +1,9 @@
 package com.svshayt.knowledge.base.demo.java.time;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.Month;
+import java.time.ZoneOffset;
 
 public class LocalDateTimeDemo {
 
@@ -11,5 +13,12 @@ public class LocalDateTimeDemo {
 
         System.out.println(now);
         System.out.println(specificDateTime);
+
+        //Конвертация LocalDateTime в Instant
+        LocalDateTime localDateTime = LocalDateTime.now();
+        Instant instant = localDateTime.toInstant(ZoneOffset.UTC);
+
+        System.out.println(localDateTime);
+        System.out.println(instant);
     }
 }

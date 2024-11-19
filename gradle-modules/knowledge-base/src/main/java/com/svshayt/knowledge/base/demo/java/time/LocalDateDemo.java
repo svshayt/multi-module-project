@@ -11,5 +11,24 @@ public class LocalDateDemo {
 
         System.out.println(today);
         System.out.println(specificDate);
+
+        //Сравнение дат
+        LocalDate date1 = LocalDate.of(2021, Month.JANUARY, 1);
+        LocalDate date2 = LocalDate.of(2022, Month.JANUARY, 1);
+
+        boolean isBefore = date1.isBefore(date2); // true
+        boolean isAfter = date1.isAfter(date2);   // false
+
+        System.out.println(isBefore);
+        System.out.println(isAfter);
+
+        //Добавление и вычитание времени
+        LocalDate today2 = LocalDate.now();
+        LocalDate nextWeek = today2.plusWeeks(1); // добавляем неделю
+        LocalDate lastMonth = today2.minusMonths(1); // вычитаем месяц
+
+        System.out.println(today2);
+        System.out.println(nextWeek);
+        System.out.println(lastMonth);
     }
 }
